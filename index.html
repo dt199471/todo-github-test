@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOリスト</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TODOリスト</h1>
+        </header>
+        
+        <div class="todo-form">
+            <div class="form-group">
+                <input type="text" id="todoInput" placeholder="新しいTODOを入力..." class="input-field">
+            </div>
+            
+            <div class="form-group">
+                <label for="deadlineInput" class="label">期限:</label>
+                <input type="date" id="deadlineInput" class="input-field date-input">
+            </div>
+            
+            <div class="form-group">
+                <label for="imageInput" class="label">画像:</label>
+                <input type="file" id="imageInput" accept="image/*" class="file-input">
+                <label for="imageInput" class="file-label">画像を選択</label>
+            </div>
+            
+            <button id="addButton" class="add-button">追加</button>
+        </div>
+        
+        <div class="todo-list" id="todoList">
+            <!-- TODOアイテムがここに追加されます -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
