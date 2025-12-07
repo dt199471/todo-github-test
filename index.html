@@ -7,9 +7,67 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
+    <!-- ログイン・登録画面 -->
+    <div id="authContainer" class="auth-container">
+        <div class="auth-box">
             <h1>TODOリスト</h1>
+            
+            <!-- ログインフォーム -->
+            <div id="loginForm" class="auth-form">
+                <h2>ログイン</h2>
+                <div class="form-group">
+                    <label for="loginEmail" class="label">メールアドレス:</label>
+                    <input type="email" id="loginEmail" class="input-field" placeholder="メールアドレスを入力">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword" class="label">パスワード:</label>
+                    <input type="password" id="loginPassword" class="input-field" placeholder="パスワードを入力">
+                </div>
+                <button id="loginButton" class="auth-button">ログイン</button>
+                <p class="auth-switch">
+                    アカウントをお持ちでない方は <a href="javascript:void(0)" id="showRegister">こちらから登録</a>
+                </p>
+                <div id="loginError" class="error-message"></div>
+            </div>
+            
+            <!-- 登録フォーム -->
+            <div id="registerForm" class="auth-form" style="display: none;">
+                <h2>新規登録</h2>
+                <div class="form-group">
+                    <label for="registerName" class="label">お名前:</label>
+                    <input type="text" id="registerName" class="input-field" placeholder="お名前を入力">
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail" class="label">メールアドレス:</label>
+                    <input type="email" id="registerEmail" class="input-field" placeholder="メールアドレスを入力">
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword" class="label">パスワード:</label>
+                    <input type="password" id="registerPassword" class="input-field" placeholder="パスワードを入力（6文字以上）">
+                </div>
+                <div class="form-group">
+                    <label for="registerPasswordConfirm" class="label">パスワード（確認）:</label>
+                    <input type="password" id="registerPasswordConfirm" class="input-field" placeholder="パスワードを再入力">
+                </div>
+                <button id="registerButton" class="auth-button">登録</button>
+                <p class="auth-switch">
+                    既にアカウントをお持ちの方は <a href="javascript:void(0)" id="showLogin">こちらからログイン</a>
+                </p>
+                <div id="registerError" class="error-message"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- TODOリスト画面 -->
+    <div id="appContainer" class="container" style="display: none;">
+        <header>
+            <div class="header-content">
+                <h1>TODOリスト</h1>
+                <div class="user-info">
+                    <span id="userName"></span>
+                    <button id="logoutButton" class="logout-button">ログアウト</button>
+                </div>
+            </div>
         </header>
         
         <div class="todo-form">
